@@ -1,0 +1,4 @@
+*.jpg
+*.gcode
+node_modules
+.DS_Store
