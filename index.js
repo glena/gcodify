@@ -1,26 +1,31 @@
-const fs = require('fs');
 const interface = require("./lib/interface");
 const { read, prepare } = require("./lib/image_handler");
 const { calculatePixels } = require('./lib/calcs');
-const GCode = require('./lib/gcode');
+const OutputFactory = require('./lib/output/factory');
 const process = require('./lib/processor');
 
 async function run(params) {
   try {
+    let pxWidth = params.width && calculatePixels(params.width, params.laserPrecision);
+    let pxHeight = params.height && calculatePixels(params.height, params.laserPrecision);
+
     let image = await read(params.filename);
+    
+    if (!(pxWidth || pxHeight)) {
+      pxWidth = image.bitmap.width;
+      pxHeight = image.bitmap.height;
+    }
 
-    const width = params.width && calculatePixels(params.width, params.laserPrecission);
-    const height = params.height && calculatePixels(params.height, params.laserPrecission);
+    Object.assign(params, { pxWidth, pxHeight });
 
-    image = prepare(image, width, height);
+    image = prepare(image, params);
 
-    const gCode = new GCode(params);
-    gCode.initialise();
+    const output = OutputFactory(params);
+    await output.initialise();
 
-    process(gCode, image)
+    process(output, image, params)
 
-    fs.writeFileSync(`./${params.filename}.gcode`, gCode.build());
-
+    output.build(params);
   } catch (e) {
     console.log('error', e);
   }
