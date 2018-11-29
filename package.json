@@ -9,6 +9,7 @@
   "author": "Germán Lena <german.lena@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.19.0",
     "jimp": "^0.5.6"
   }
 }
