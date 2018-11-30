@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const {init: initInterface, getParams} = require("./lib/interface");
 const run = require('./index');
 
