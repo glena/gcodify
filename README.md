@@ -5,7 +5,7 @@ This tool parses an image and generates a GCODE file ready to be used to laser e
 ## Usage
 
 ```
-Usage: index [options] <file>
+Usage: cli [options] <file>
 
 Options:
   -V, --version                   output the version number
@@ -17,14 +17,14 @@ Options:
   -p, --precision [value]         Laser beam size. Defaults to 0.01mm.
   -lon, --laser-on-code [value]   GCODE to turn laser ON. Defaults to M106.
   -lof, --laser-off-code [value]  GCODE to turn laser OFF. Defaults to M107.
-  -s, --laser-speed [value]       Speed for the movements while engraving. Defaults to 40 mm/s.
+  -s, --laser-speed [value]       Speed for the movements while engraving. Defaults to 10 mm/s.
   -t, --travel-speed [value]      Speed for the movements while traveling. Defaults to 200 mm/s.
   -pt, --pixel-threshold [value]  Threshold where a pixel is identified as black (from 0 to 255). Defaults to 128.
   -b, --image-brighness [value]   Tweaks the image brighness (from -1 to 1)
   -c, --image-contrast [value]    Tweaks the image contrast (from -1 to 1)
   -q, --image-quality [value]     Image quality (from 0 to 100). Defaults to 60.
   -o, --output-filename [value]   Overrides the filename used for the process output. Used for both preview and gcode output.
-  -o, --output-filename [value]   Overrides the filename used for the process output. Used for both preview and gcode output.
   --preview                       Will generate an image instead of a GCODE to preview what the CCODE will look like.
+  --debug                         Show debug info such as stack traces and debug logs.
   -h, --help                      output usage information
   ```
