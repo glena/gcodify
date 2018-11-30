@@ -4,7 +4,7 @@ This tool parses an image and generates a GCODE file ready to be used to laser e
 
 ## Install
 
-Install NPM is you dont have it: https://www.npmjs.com/get-npm
+Install Node (https://nodejs.org/en/download/) and NPM is you dont have it (https://www.npmjs.com/get-npm).
 
 Install GCODify:
 
