@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Process an image and generates gcode to use with laser engravers",
   "main": "index.js",
+  "bin": {
+    "gcodify": "./cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
