@@ -2,10 +2,20 @@
 
 This tool parses an image and generates a GCODE file ready to be used to laser engrave with a 3d printer
 
+## Install
+
+Install NPM is you dont have it: https://www.npmjs.com/get-npm
+
+Install GCODify:
+
+```
+$ npm i -g gcodify
+```
+
 ## Usage
 
 ```
-Usage: cli [options] <file>
+Usage: gcodify [options] <file>
 
 Options:
   -V, --version                   output the version number
@@ -28,3 +38,9 @@ Options:
   --debug                         Show debug info such as stack traces and debug logs.
   -h, --help                      output usage information
   ```
+
+Example: 
+
+```
+$ gcodify -w 200 ./my_cool_logo.jpg
+```
