@@ -43,7 +43,7 @@ Options:
 
 We want to engave this picture:
 
-![bull](https://cldup.com/HE-26SObl7-3000x3000.png)
+![bull](https://cldup.com/HE-26SObl7-300x300.png)
 
 ```
 $ gcodify --preview -b 0.4 --pixel-threshold 125 -w 50 bull.png
@@ -53,7 +53,7 @@ This outputs `preview.bull.png`. We increase the brightness and lowering the thr
 
 Preview:
 
-![bull preview after running the first command](https://cldup.com/ZS8mrsl5JE-3000x3000.png)
+![bull preview after running the first command](https://cldup.com/ZS8mrsl5JE-300x300.png)
 
 Once we are good with the preview, we generate the GCODE file to print:
 
