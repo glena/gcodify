@@ -20,8 +20,8 @@ Usage: gcodify [options] <file>
 Options:
   -V, --version                   output the version number
   -z, --z-offset [value]          Position for the Z axis in mm. Defaults to 90mm.
-  -x, --x-offset [value]          Position for the X axis in mm. Defaults to 35mm.
-  -y, --y-offset [value]          Position for the Y axis in mm. Defaults to 35mm.
+  -x, --x-offset [value]          Position for the X axis in mm. Defaults to 28mm.
+  -y, --y-offset [value]          Position for the Y axis in mm. Defaults to 16mm.
   -w, --width [value]             Resizes the image by its width in mm (height will be automatically computed if not provided).
   -h, --height [value]            Resizes the image by its height in mm (width will be automatically computed if not provided).
   -p, --precision [value]         Laser beam size. Defaults to 0.01mm.
