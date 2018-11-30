@@ -1,6 +1,6 @@
 {
   "name": "gcodify",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Process an image and generates gcode to use with laser engravers",
   "main": "index.js",
   "bin": {
