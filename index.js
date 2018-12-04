@@ -29,7 +29,7 @@ async function run(params) {
 
     process(output, image, params)
 
-    output.build(params);
+    await output.build(params);
   } catch (e) {
     logger.error(e);
   }
