@@ -32,6 +32,7 @@ async function run(params) {
     await output.build(params);
   } catch (e) {
     logger.error(e);
+    return e;
   }
 }
 
